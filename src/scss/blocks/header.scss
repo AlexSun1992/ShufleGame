@@ -1,0 +1,18 @@
+.header{
+  //min-height: 40px;
+  position: relative;
+  height: 10vh;
+
+
+  h1{
+    text-align: center;
+    line-height: 10vh;
+    margin:0;
+  }
+
+}
+
+.header-navigation{
+  min-height: inherit;
+  border-top:1px solid transparent;
+}

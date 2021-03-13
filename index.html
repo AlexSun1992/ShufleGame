@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="build/css/style.css">
+</head>
+<body>
+<div class="wrapper">
+<header class="header">
+<!--    <div class="greeting">-->
+<!--        <div class="greeting-instructions">-->
+<!--            <p class="greeting-instructions__text">-->
+<!--                Перед началом игры, настоятельно рекомендуем-->
+<!--                ознакомиться с ее правилами.-->
+<!--            </p>-->
+<!--            <p class="greeting-instructions__text">-->
+<!--                Это можно сделать перейдя по ссылке в "Правила игры" в главном меню.-->
+<!--            </p>-->
+<!--            <button class="greeting-instructions__btn">Понятно</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <nav class="header-navigation">-->
+<!--        <ul class="navigation-menu">-->
+<!--            <li class="navigation-menu__item">-->
+<!--                <a href="#" class="navigation-menu__item-ref">-->
+<!--                   Показать/Скрыть-->
+<!--                    Правила игры-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li class="navigation-menu__item">-->
+<!--                <a href="#" class="navigation-menu__item-ref navigation-menu__item-ref&#45;&#45;start">На игровое поле</a>-->
+<!--            </li>-->
+<!--            <li class="navigation-menu__item">-->
+<!--                <a href="#" class="navigation-menu__item-ref navigation-menu__item-ref&#45;&#45;finish">Закончить игру</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+    <h1>Успейте отгадать слово и верно записать его!</h1>
+</header>
+<main class="main">
+<!--    <div class="popup-rules">-->
+<!--        <h1 class="popup-rules__state">Правила игры</h1>-->
+<!--        <p class="popup-rules__item">В начале игры на экране отображается слово, буквы в котором расположены в случайном порядке.</p>-->
+<!--        <p class="popup-rules__item">За отведенное время необходимо расположить все буквы в правильном порядке.</p>-->
+<!--        <p class="popup-rules__item">Как справитесь с задачей, нажмите кнопку 'Готово'.</p>-->
+<!--        <h2 class="popup-rules__wish">Удачи!!!</h2>-->
+<!--    </div>-->
+<!--    <section class="setting">-->
+<!--        <form class="setting__form" action="">-->
+<!--            <label>Время раунда<input class="TimeRound" type="text"></label><br>-->
+<!--            <label>Кол-во попыток<input class="Amount" type="text"></label><br>-->
+<!--            <label><input type="submit" value="!!!"></label>-->
+<!--        </form>-->
+<!--    </section>-->
+    <div class="playground-wrapper">
+        <div class="playground__settings">
+            <h2>Дополнительные настройки</h2>
+            <form class="playground__form">
+                <label>Время раунда:<input class="playground__time" type="text"></label><br>
+                <label>Количество ошибок:<input class=playground__attempt type="text"></label><br>
+                <label><input class="playground__set" type="submit" value="Установить настройки"></label>
+            </form>
+        </div>
+        <section class="playground">
+        <div class="button-wrapper">
+        <button class="playground-btn playground-btn--start">Начать игру</button>
+        <button class="playground-btn playground-btn--finish">Закончить игру</button>
+            <button class="playground-btn playground-btn--again" disabled>Еще раз!</button>
+        </div>
+        <div class="playground-counter">
+            <p>Кол-во ошибок:</p>
+            <span class="playground-possible">
+                <h2 class="playground-possible__number"></h2>
+            </span>
+        </div>
+        <div class="playground-counter">
+            <p>Время раунда:</p>
+            <span class="playground-roundTime">
+                <h2 class="playground-roundTime__time"></h2>
+            </span>
+        </div>
+            <div class="counter-wrapper">
+        <div class="playground-counter">
+            <p>Количество правильных ответов:</p>
+            <span class="playground-rights"></span>
+        </div>
+        <div class="playground-counter">
+            <p>Количество ошибок:</p>
+            <span class="playground-mistakes"></span>
+        </div>
+        <div class="playground-counter game-result">
+            <p>Времени прошло:</p>
+            <span class="playground-timer">0</span>
+        </div>
+            </div>
+        <ul class="position"></ul>
+        <form class="form">
+            <label class="form__label form__label--answer">Ваш ответ:<input class="form__answer" type="text"></label>
+            <label class="form__label form__label--btn"><input class="form__submit"  type="submit" value="Готово!"></label>
+        </form>
+        </section>
+        <div class="playground-result"></div>
+    </div>
+</main>
+    <footer class="footer"></footer>
+</div>
+<!--<script src="build/js/bundle.js"></script>-->
+<!--<script src ="src/js/start.js"></script>-->
+<script src="src/js/words.js"></script>
+</body>
+</html>

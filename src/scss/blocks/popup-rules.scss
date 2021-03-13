@@ -1,0 +1,25 @@
+.popup-rules{
+  width: 100%;
+  min-height: 500px;
+  position: absolute;
+  background-color: aliceblue;
+  text-align: center;
+  transform: translateY(-2000px);
+  z-index: 1000;
+}
+
+.popup-rules__state{
+  font-size: 45px;
+  line-height: 55px;
+}
+
+.popup-rules__item{
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.popup-rules__wish{
+  font-size: 40px;
+  line-height: 55px;
+}
+

@@ -1,0 +1,24 @@
+.greeting-instructions{
+  width: 80%;
+  min-height: 500px;
+  box-shadow:  0 0 2px 2px black;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 40px;
+  line-height: 55px;
+}
+
+.greeting-instructions__text{
+  margin-top: 40px;
+}
+
+
+.greeting-instructions__btn{
+  display: block;
+  width:15%;
+  margin: 40px auto;
+  background-color:rgb(255,255,255);
+  box-shadow: 0 0 3px 3px black;
+  border:none;
+  cursor:pointer;
+}

@@ -1,0 +1,90 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+}
+
+.wrapper{
+  background-color: lightblue;
+  height: 100vh;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.appear{
+  animation-name: appear;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+  0%{
+    transform: translateY(-2000px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+.disappear{
+  animation-name: disappear;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes disappear {
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform:translateY(-2000px);
+  }
+
+}
+
+
+.game-start{
+  animation-name:start;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes start {
+  0%{
+    transform:translateX(-2000px);
+  }
+
+  100%{
+    transform:translateX(0);
+  }
+
+}
+
+.game-finish{
+  animation-name:finish;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes finish {
+  0%{
+    transform:translateX(0px);
+  }
+
+  100%{
+    transform:translateX(-2000px);
+  }
+}

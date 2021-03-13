@@ -1,0 +1,22 @@
+.position{
+  width: auto;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3vh auto 3vh;
+}
+
+
+
+.position__item{
+  width: 5vw;
+  height: 8vh;
+  box-shadow: 0 0 1px 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-left: 7px;
+}

@@ -10,6 +10,9 @@ const minJs = require('gulp-uglify');
 const concat = require('gulp-concat');
 const imgMin = require('gulp-imagemin');
 const svgMin = require('gulp-svgmin');
+const webpack = require('webpack');
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
 
 
 function Sass(){
@@ -36,22 +39,30 @@ function Images(){
         .pipe(gulp.dest('build/img'))
 }
 
-function Js() {
-    return gulp.src(['src/js/*.js'], {base: 'src'})
-        .pipe(plumber())
-        .pipe(concat('min.js'))
-        .pipe(minJs())
-        .pipe(gulp.dest('build/js'))
-}
+// function Js() {
+//     return gulp.src(['src/js/*.js'], {base: 'src'})
+//         .pipe(plumber())
+//         .pipe(concat('min.js'))
+//         .pipe(rename('index.js'))
+//         .pipe(minJs())
+//         .pipe(gulp.dest('build/js'))
+// }
+//
+//
+// function WebpackJS(){
+//     return gulp.src('src/js/words.js')
+//         .pipe(webpackStream(webpackConfig),webpack)
+//         .pipe(gulp.dest('build/js'))
+// }
 
 
 function Server(){
     server.init({server:"./",browser:'chrome'});
     gulp.watch("index.html").on('change', server.reload);
-    gulp.watch('src/scss/**/*.scss',gulp.series(Sass,Js));
+    gulp.watch('src/scss/**/*.scss',gulp.series(Sass));
 }
 
 
 
-exports.build = series(Sass,Svg,Images,Js);
-exports.start = series(Sass,Svg,Images,Js,Server);
+exports.build = series(Sass,Svg,Images);
+exports.start = series(Sass,Svg,Images,Server);

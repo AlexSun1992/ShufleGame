@@ -1,0 +1,41 @@
+.setting{
+  position: absolute;
+  top:0;
+  width: 20%;
+  height: inherit;
+  box-shadow: 0 0 2px 2px black;
+}
+
+
+.setting__form{
+  box-shadow: inset  0 0 2px 2px red;
+
+}
+
+.setting__submit{
+  cursor: pointer;
+}
+
+.setting__container{
+  box-shadow: 0 0 2px 2px black;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+
+  .setting__time{
+    width: 40%;
+  }
+
+  .setting__amount{
+    width: 40%;
+  }
+
+  .setting__use{
+    display: block;
+    cursor: pointer;
+  }
+
+}
+
+
+
